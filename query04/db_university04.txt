@@ -1,0 +1,1 @@
+SELECT * FROM courses WHERE period = 'I semestre' AND year = 1;   
