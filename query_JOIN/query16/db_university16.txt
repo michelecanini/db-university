@@ -1,0 +1,7 @@
+SELECT students.*, degrees.name as corso_di_laurea, departments.name as dipartimento
+FROM students
+INNER JOIN degrees
+ON students.degree_id = degrees.id
+INNER JOIN departments
+ON degrees.department_id = departments.id
+ORDER BY students.surname, students.name;
