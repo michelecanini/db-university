@@ -1,0 +1,6 @@
+SELECT students.id as student_id, students.name as nome_studente, students.surname as cognome_studente, exam_student.exam_id, COUNT(*) as numero_tentativi, MAX(exam_student.vote) as voto_massimo
+FROM students
+INNER JOIN exam_student
+ON students.id = exam_student.student_id
+GROUP BY students.id, exam_student.exam_id
+HAVING MAX(exam_student.vote) >= 18;
