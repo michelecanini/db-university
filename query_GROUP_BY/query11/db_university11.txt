@@ -1,0 +1,4 @@
+SELECT exam_id as appello_esame, AVG(vote) as media_voto
+FROM exam_student
+GROUP BY exam_id
+ORDER BY exam_id;
