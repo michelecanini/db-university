@@ -1,0 +1,7 @@
+SELECT courses.*, teachers.name as nome_insegnante, teachers.surname as cognome_insegnante
+FROM courses
+INNER JOIN course_teacher
+ON courses.id = course_teacher.course_id
+INNER JOIN teachers
+ON course_teacher.teacher_id = teachers.id
+WHERE course_teacher.teacher_id = 44;
