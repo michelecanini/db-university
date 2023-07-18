@@ -1,0 +1,4 @@
+SELECT office_address as ufficio, COUNT(*) as numero_insegnanti
+FROM teachers
+GROUP BY office_address
+ORDER BY office_address;
